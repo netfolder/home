@@ -1,0 +1,579 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"  lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<script type="text/javascript" src="http://script.auction.co.kr/common/jquery.js"></script>
+	<script type="text/javascript" src="http://eventimg.auction.co.kr/md/auction/04D25F0304/TweenLite.min.js"></script>
+	<script type="text/javascript" src="http://eventimg.auction.co.kr/md/auction/04D25F0304/TimelineLite.min.js"></script>
+	<script type="text/javascript" src="http://eventimg.auction.co.kr/md/auction/04D25F0304/EasePack.min.js"></script>
+	<script type="text/javascript" src="http://eventimg.auction.co.kr/md/auction/04D25F0304/CSSPlugin.min.js"></script>
+	<script type="text/javascript" src="http://eventimg.auction.co.kr/md/auction/04D25F0304/TweenMax.min.js"></script>
+	<script type="text/javascript" src="http://eventimg.auction.co.kr/md/auction/04D25F0304/BezierPlugin.min.js"></script>
+
+
+	<link rel="stylesheet" href="http://eventimg.auction.co.kr/md/auction/08405BF42E/idangerous.swiper.css">
+	<script src="http://eventimg.auction.co.kr/md/auction/08405BF42E/idangerous.swiper.js"></script>
+	<script type="text/javascript" src="http://eventimg.auction.co.kr/md/auction/04D25F0304/jquery.easing-1.3.min.js"></script>
+	<title>b&amp;b</title>
+	<style>
+		*{padding: 0; margin:0; border: 0;}
+		.rel{position: relative; width:100%;}
+		.inc-obj{position: relative; width:980px; margin: 0 auto;}
+		.inc-obj-946{position: relative; width:946px; margin: 0 auto;}
+		#p_wrapper{position:relative; width:100%; line-height: 0px;}
+		#p_wrapper img{vertical-align: top; line-height: 0px;}
+
+		#p_header{position: relative; width:100%;}
+		#p_contents{position: relative; width:100%; margin-top:80px;}
+		#p_footer{position: relative; width:100%;}
+		.ifr_sns{top:20px;right:-60px;position: absolute; z-index: 9999;}
+		.ifr_sns2{top:20px;left:50%;position: absolute; z-index: 9999; margin-left: 430px;}
+		.hisImg_01{background: url("http://eventimg.auction.co.kr/md/auction/095C138D39/w_audioHis_01.jpg") no-repeat center top; height:300px;}
+		.hisImg_02{background: url("http://eventimg.auction.co.kr/md/auction/095C138D39/w_audioHis_02.jpg") no-repeat center top; height:300px;}
+		.hisImg_03{background: url("http://eventimg.auction.co.kr/md/auction/095C138D39/w_audioHis_03.jpg") no-repeat center top; height:300px;}
+		.hisImg_04{background: url("http://eventimg.auction.co.kr/md/auction/095C138D39/w_audioHis_04.jpg") no-repeat center top; height:300px;}
+		.hisImg_05{background: url("http://eventimg.auction.co.kr/md/auction/095C138D39/w_audioHis_05.jpg") no-repeat center top; height:300px;}
+		.hisImg_06{background: url("http://eventimg.auction.co.kr/md/auction/095C138D39/w_audioHis_06.jpg") no-repeat center top; height:300px;}
+		.hisImg_07{background: url("http://eventimg.auction.co.kr/md/auction/095C138D39/w_audioHis_07.jpg") no-repeat center top; height:300px;}
+		.hisImg_08{background: url("http://eventimg.auction.co.kr/md/auction/095C138D39/w_audioHis_08.jpg") no-repeat center top; height:300px;}
+		.hisImg_09{background: url("http://eventimg.auction.co.kr/md/auction/095C138D39/w_audioHis_09.jpg") no-repeat center top; height:300px;}
+		.hisImg_10{background: url("http://eventimg.auction.co.kr/md/auction/095C138D39/w_audioHis_10.jpg") no-repeat center top; height:300px;}
+
+		.bnoSpecial{width:100%; height:919px; margin:0 auto;position:relative;padding-bottom:20px; background-color: #f3f3f3;}
+		.bnoSpecial .swiper-wrapper{position:relative; margin-top: 59px;}
+		.bnoSpecial .swiper-slide{position:relative;width:980px;height:800px;}
+		.bnoSpecial .swiper-pagination{width:100%;bottom:45px;left:0}
+		.bnoSpecial .swiper-pagination .swiper-pagination-switch{width:12px;height:12px;display:inline-block;*display:inline;*zoom:1;padding:0 8px;background:url(http://eventimg.auction.co.kr/md/auction/095C138D39/w_ico_blit_off.png) no-repeat 0 0;border-radius:0}
+		.bnoSpecial .swiper-pagination .swiper-active-switch{background:url(http://eventimg.auction.co.kr/md/auction/095C138D39/w_ico_blit_on.png) no-repeat 0 0}
+		.bnoSpecial .swiper-button-prev{width:32px;height:59px;position:absolute;top:65%;margin-top:-30px;left:30px;background:url(http://eventimg.auction.co.kr/md/auction/095C138D39/lArr.png) no-repeat 0 0;z-index:100;cursor:pointer}
+		.bnoSpecial .swiper-button-next{width:32px;height:59px;position:absolute;top:65%;margin-top:-30px;right:30px;background:url(http://eventimg.auction.co.kr/md/auction/095C138D39/rArr.png) no-repeat 0 0;z-index:100;cursor:pointer}
+
+		.ss17{width:100%; margin:0 auto;position:relative;padding-bottom:20px; background-color: #f3f3f3;}
+		.ss17 .swiper-wrapper{position:relative;}
+		.ss17 .swiper-slide{position:relative;width:946px;height:755px;}
+		.ss17 .swiper-pagination{width:100%;bottom:41px;left:0; }
+		.ss17 .swiper-pagination .swiper-pagination-switch{width:12px;height:12px;display:inline-block;*display:inline;*zoom:1;padding:0 8px;background:url(http://eventimg.auction.co.kr/md/auction/095C138D39/w_ico_blit_off.png) no-repeat 0 0;border-radius:0}
+		.ss17 .swiper-pagination .swiper-active-switch{background:url(http://eventimg.auction.co.kr/md/auction/095C138D39/w_ico_blit_on.png) no-repeat 0 0}
+		.ss17 .swiper-button-prev{width:32px;height:59px;position:absolute;top:50%;margin-top:-30px;left:10px;background:url(http://eventimg.auction.co.kr/md/auction/095C138D39/lArr2.png) no-repeat 0 0;z-index:100;cursor:pointer}
+		.ss17 .swiper-button-next{width:32px;height:59px;position:absolute;top:50%;margin-top:-30px;right:10px;background:url(http://eventimg.auction.co.kr/md/auction/095C138D39/rArr2.png) no-repeat 0 0;z-index:100;cursor:pointer}
+
+
+		.visual{width:100%; height:668px; background-color: #f5f5f5; overflow: hidden; display: none;}
+		.visual_ie{position: relative; width:100%; background: url("http://eventimg.auction.co.kr/md/auction/095C138D39/w_visual_ie7.jpg") no-repeat center top; height:668px; display: none;}
+		.mm{/*opacity: 0; filter: alpha(opacity:'0');*/}
+		/*.w_tit{position: absolute; left:300px; top:125px; width:40%;  z-index: 200; opacity: 0; filter: alpha(opacity:'0');}*/
+		.w_tit{position: absolute; left:355px; top:169px; width:28%;  z-index: 200; }
+		.m_obj_01{position: absolute; left:-250px; top:47px;  z-index: 101; opacity: 0; filter: alpha(opacity:'0');}
+		.m_obj_02{position: absolute; left:767px; top:-460px;  z-index: 102; }
+		.m_obj_03{position: absolute; left:-108px; top:680px;  z-index: 103;
+			-ms-transform: rotate(-39deg); /* IE 9 */
+			-webkit-transform: rotate(-39deg); /* Chrome, Safari, Opera */
+			transform: rotate(-39deg);}
+		.m_obj_04{position: absolute; left:680px; top:534px;  z-index: 104; opacity: 0; filter: alpha(opacity:'0');}
+
+		.msg{display: none;}
+		.btn_on{display: none;}
+
+		.prdArea2{width:980px; position: relative; margin-top:22px;}
+		.prdArea2 li{list-style: none; float: left; margin-bottom: 22px; margin-right: 22px;}
+		.prdArea2 li img{ vertical-align: top; line-height: 0;}
+
+		.bo_popup{position: absolute; z-index: 199; display: none; width: 90%;margin-left: 199px;margin-top: -5%;}
+		.popup_btn{position:absolute;left: 33%;top: 80%;width: 34%;height: 8%;}
+
+		.botPrdArea{position: relative; width:980px; overflow: hidden;}
+		.botPrdArea li{list-style: none; position: relative; width:468px; height:468px; float: left; margin-right: 10px; margin-bottom: 10px;}
+		.botPrdArea li a{display: block;}
+		.botPrdArea li .cover{position: absolute; /*display: none;*/opacity: 0;  filter: alpha(opacity:'0');}
+
+		.botPrdArea li.three .mc0{position:absolute; top:0; left:0;}
+		.botPrdArea li.three .mc1{position:absolute; bottom:0; left:0;}
+		.botPrdArea li.three .mc2{position:absolute; bottom:0; right:0;}
+
+		.botPrdArea li.one{}
+	</style>
+	<script>
+		function get_version_of_IE () {
+			var word;
+			var version = "N/A";
+			var agent = navigator.userAgent.toLowerCase();
+			var name = navigator.appName;
+			// IE old version ( IE 10 or Lower )
+			if ( name == "Microsoft Internet Explorer" ) word = "msie ";
+
+			else {
+				// IE 11
+				if ( agent.search("trident") > -1 ) word = "trident/.*rv:";
+
+				// Microsoft Edge
+				else if ( agent.search("edge/") > -1 ) word = "edge/";
+			}
+
+			var reg = new RegExp( word + "([0-9]{1,})(\\.{0,}[0-9]{0,1})" );
+
+			if (  reg.exec( agent ) != null  ) version = RegExp.$1 + RegExp.$2;
+
+			return version;
+		}
+
+		function notice_on(_mc){
+			$(_mc).find(".btn_off").css("display" ,"none")
+			$(_mc).find(".btn_on").css("display" ,"block")
+			//$(_mc).find(".msg").css("display" ,"block")
+			$(_mc).find(".msg").slideDown(300,'easeInOutQuad');
+		};
+		function notice_off(_mc){
+			$(_mc).find(".btn_off").css("display" ,"block")
+			$(_mc).find(".btn_on").css("display" ,"none")
+			//$(_mc).find(".msg").css("display" ,"none")
+			$(_mc).find(".msg").slideUp(400,'easeInOutQuad');
+		};
+		function popup_open(){
+			//var ty = $(".auctionStore").offset().top;
+			$(".bo_popup").css("display" , "block")
+			//$(".bo_popup").css("top" , ty)
+		}
+		function popup_close(){
+			$(".bo_popup").css("display" , "none")
+		}
+
+		/*모션관련*/
+		$(document).ready(function(){
+			if (get_version_of_IE() == "7.0" || get_version_of_IE() == "8.0") {
+				$(".visual").css("display","none")
+				$(".visual_ie").css("display","block")
+
+				$(".ifr_sns2").attr("src" , "http://eventv2.auction.co.kr/event3/regular/SnsShare/top_sns.aspx?groupid=20170404")
+
+			} else {
+				$(".visual").css("display","block")
+				$(".visual_ie").css("display","none")
+
+				/*var _obj0 = ".w_tit";*/
+				var _obj1 = ".m_obj_01";
+				var _obj2 = ".m_obj_02";
+				var _obj3 = ".m_obj_03";
+				var _obj4 = ".m_obj_04";
+
+				/*TweenLite.to(_obj0, 5, {left:355+"px",top:169+"px", opacity:1, width:28+"%",  ease:Power3.easeOut})*/
+				/*TweenLite.to(_obj1, 1.8, {left:-66+"px",top:47+"px",  opacity:1, ease:Power2.easeOut}).delay(0.6)
+				TweenLite.to(_obj2, 1.8, {left:767+"px",top:-100+"px", ease:Power2.easeOut}).delay(1.4)
+				TweenLite.to(_obj3, 1.8, {left:-108+"px",top:423+"px", rotation:0 ,ease:Power2.easeOut}).delay(1.8)
+				TweenLite.to(_obj4, 1.8, {left:565+"px",top:534+"px", opacity:1,ease:Power2.easeOut , onComplete:function(){
+
+				}}).delay(1.0)*/
+
+
+				TweenLite.to(_obj1, 1.8, {left:-66+"px",top:47+"px",  opacity:1, ease:Power2.easeOut}).delay(1.4)
+				TweenLite.to(_obj2, 1.8, {left:767+"px",top:-100+"px", ease:Power2.easeOut}).delay(1.0)
+				TweenLite.to(_obj3, 1.8, {left:-108+"px",top:423+"px", rotation:0 ,ease:Power2.easeOut}).delay(0.6)
+				TweenLite.to(_obj4, 1.8, {left:565+"px",top:534+"px", opacity:1,ease:Power2.easeOut , onComplete:function(){
+					//alert("end");
+				}}).delay(1.8)
+			}
+		})
+
+
+	</script>
+</head>
+
+<body>
+	<div id="p_wrapper">
+		<div id="p_header">
+			<div class="top rel">
+				<div class="inc-obj">
+					<img src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_top.jpg" alt=""/>
+				</div>
+			</div>
+
+			<div class="visual_ie rel">
+				<div class="inc-obj" style=" height:668px !important; z-index: 900; overflow: hidden;">
+					<iframe class="ifr_sns2" src="" width="56" height="320" scrolling="no" frameborder="0" allowtransparency="true"></iframe>
+				</div>
+			</div>
+
+			<div class="visual rel">
+				<div class="inc-obj" style="height:668px; ">
+					<iframe class="ifr_sns" src="http://eventv2.auction.co.kr/event3/regular/SnsShare/top_sns.aspx?groupid=20170404" width="56" height="320" scrolling="no" frameborder="0" allowtransparency="true"></iframe>
+					<img class="w_tit mm" src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_visual_txt.png" alt=""/>
+					<img class="m_obj_01 mm" src="http://eventimg.auction.co.kr/md/auction/095C138D39/m_obj1.jpg" alt=""/>
+					<img class="m_obj_02 mm" src="http://eventimg.auction.co.kr/md/auction/095C138D39/m_obj2.jpg" alt=""/>
+					<img class="m_obj_03 mm" src="http://eventimg.auction.co.kr/md/auction/095C138D39/m_obj3.jpg" alt=""/>
+					<img class="m_obj_04 mm" src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_obj4.jpg" alt=""/>
+				</div>
+			</div>
+
+		</div>
+		<!--// p_header-->
+
+		<div id="p_contents">
+			<!--//-->
+			<div class="his rel">
+				<div class="inc-obj">
+					<img src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_his_01.jpg" alt=""/>
+					<img src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_his_02.jpg" alt=""/>
+					<img src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_his_03.jpg" alt=""/>
+				</div>
+			</div>
+			<!--//-->
+			<div class="audio rel">
+				<div class="inc-obj">
+					<img src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_audio_tit.jpg" alt=""/>
+				</div>
+				<div class="hisImg_01"></div>
+				<div class="hisImg_02"></div>
+				<div class="hisImg_03"></div>
+				<div class="hisImg_04"></div>
+				<div class="hisImg_05"></div>
+				<div class="hisImg_06"></div>
+				<div class="hisImg_07"></div>
+				<div class="hisImg_08"></div>
+				<div class="hisImg_09"></div>
+				<div class="hisImg_10"></div>
+			</div>
+			<!--//-->
+			<div class="bnoSpecial rel">
+				<div class="inc-obj">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+
+
+							<div class="swiper-slide">
+								<img src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_roll01_01.jpg" alt=""/>
+							</div>
+							<div class="swiper-slide">
+								<img src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_roll01_02.jpg" alt=""/>
+							</div>
+							<div class="swiper-slide">
+								<img src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_roll01_03.jpg" alt=""/>
+							</div>
+
+
+						</div>
+					</div>
+
+					<!-- Add Arrows -->
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+
+					<!-- Add Pagination -->
+					<div class="swiper-pagination"></div>
+
+				</div>
+				<script>
+					var mySwiper = new Swiper('.bnoSpecial .swiper-container', {
+						pagination:'.bnoSpecial .swiper-pagination',
+						paginationClickable:true,
+						simulateTouch:false,
+						loop:true,
+						autoplay:4500,
+						calculateHeight:true
+					});
+					$('.bnoSpecial .swiper-button-prev').bind('click', function(e){
+						e.preventDefault();
+
+						// Autoplay false일때
+						//mySwiper.swipePrev();
+
+						// Autoplay True일때
+						mySwiper.stopAutoplay();
+						mySwiper.swipePrev();
+						mySwiper.startAutoplay();
+					});
+					$('.bnoSpecial .swiper-button-next').bind('click', function(e){
+						e.preventDefault();
+
+						// Autoplay false일때
+						//mySwiper.swipeNext();
+
+						// Autoplay True일때
+						mySwiper.stopAutoplay();
+						mySwiper.swipeNext();
+						mySwiper.startAutoplay();
+					});
+				</script>
+
+			</div>
+			<!--//-->
+			<!--coupon -->
+			<div class="couponArea rel">
+				<div class="inc-obj">
+					<iframe  style="position: absolute; left:340px; top:660px;" src="dev/coupon_btn.html" width="301" height="60"  scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+					<img src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_couponArea.jpg" alt=""/>
+					<div class="notice_box" style="padding-bottom: 30px;">
+						<a href="javascript:notice_on('.notice_box')"><img class="btn_off" src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_notice_off.jpg"></a>
+						<a href="javascript:notice_off('.notice_box')"><img class="btn_on" src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_notice_on.jpg"></a>
+						<p class="msg"><img src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_notice_img.jpg"></p>
+					</div>
+				</div>
+			</div>
+			<!--//-->
+
+			<!--ss17-->
+			<div class="ss17 rel" style="background-color: #efcec1;">
+				<div class="inc-obj" >
+					<img src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_ss17.jpg" alt=""/>
+					<div class="inc-obj-946">
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+
+
+								<div class="swiper-slide">
+									<img src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_roll02_01.jpg" alt=""/>
+								</div>
+								<div class="swiper-slide">
+									<img src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_roll02_02.jpg" alt=""/>
+								</div>
+								<div class="swiper-slide">
+									<img src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_roll02_03.jpg" alt=""/>
+								</div>
+
+
+							</div>
+						</div>
+
+						<!-- Add Arrows -->
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-button-next"></div>
+
+						<!-- Add Pagination -->
+						<div class="swiper-pagination"></div>
+					</div>
+					<!--// 롤링 끝.-->
+					<div class="inc-obj-946" style="overflow: hidden;">
+						<ul class="prdArea2">
+							<li>
+								<a href="http://itempage3.auction.co.kr/detailview.aspx?itemno=B408383389" target="_blank"><img src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_prd_01.jpg" alt=""/></a>
+							</li>
+							<li>
+								<a href="http://itempage3.auction.co.kr/detailview.aspx?itemno=B408382141" target="_blank"><img src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_prd_02.jpg" alt=""/></a>
+							</li>
+
+							<li>
+								<a href="http://itempage3.auction.co.kr/detailview.aspx?itemno=B408377657" target="_blank"><img src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_prd_03.jpg" alt=""/></a>
+							</li>
+							<li>
+								<a href="http://itempage3.auction.co.kr/detailview.aspx?itemno=B408372811" target="_blank"><img src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_prd_04.jpg" alt=""/></a>
+							</li>
+
+						</ul>
+					</div>
+					<!--//-->
+					<div class="inc-obj">
+						<iframe style="position: absolute; z-index: 100; left:205px; top:44px;" width="570" height="347" src="http://www.youtube.com/embed/WrWTW0gCbj4?wmode=opaque&rel=0" frameborder="0" allowfullscreen></iframe>
+						<img src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_video_bg.jpg" alt=""/>
+					</div>
+				</div>
+				<script>
+					var mySwiper2 = new Swiper('.ss17 .swiper-container', {
+						pagination:'.ss17 .swiper-pagination',
+						paginationClickable:true,
+						simulateTouch:false,
+						loop:true,
+						autoplay:4500,
+						calculateHeight:true
+					});
+					$('.ss17 .swiper-button-prev').bind('click', function(e){
+						e.preventDefault();
+
+						// Autoplay false일때
+						//mySwiper2.swipePrev();
+
+						// Autoplay True일때
+						mySwiper2.stopAutoplay();
+						mySwiper2.swipePrev();
+						mySwiper2.startAutoplay();
+					});
+					$('.ss17 .swiper-button-next').bind('click', function(e){
+						e.preventDefault();
+
+						// Autoplay false일때
+						//mySwiper2.swipeNext();
+
+						// Autoplay True일때
+						mySwiper2.stopAutoplay();
+						mySwiper2.swipeNext();
+						mySwiper2.startAutoplay();
+					});
+				</script>
+			</div>
+			<!--//-->
+			<div class="auctionStore rel" style="background: url(http://eventimg.auction.co.kr/md/auction/095C138D39/w_auctionStore_img_bg.jpg) no-repeat center top; z-index: 100;">
+				<div class="inc-obj">
+					<div class="bo_popup">
+						<a href="javascript:popup_close();"><img src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_popup_img.png" alt=""/></a>
+					</div>
+					<img src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_auctionStore_img.jpg" alt="" usemap="#Map" border="0"/>
+                    <map name="Map" id="Map">
+                      <area shape="rect" coords="383,536,598,589" href="javascript:popup_open();" onfocus="this.blur()"/>
+                    </map>
+				</div>
+			</div>
+
+			<!--facebook-->
+			<div class="facebook rel" style="background: url(http://eventimg.auction.co.kr/md/auction/095C138D39/w_sns_event_bg2.jpg) no-repeat center top; z-index: 98;">
+				<div class="inc-obj">
+					<iframe style="position:absolute; left:340px; top:710px;" src="dev/facebook_btn.html" width="300" height="60" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+					<img src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_sns_event_bg.png" alt=""/>
+				</div>
+				<div class="inc-obj">
+					<div class="notice_box2" style="padding-bottom: 60px;">
+						<a href="javascript:notice_on('.notice_box2')"><img class="btn_off" src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_facebook_notice_off.png"></a>
+						<a href="javascript:notice_off('.notice_box2')"><img class="btn_on" src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_facebook_notice_on.png"></a>
+						<p class="msg"><img src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_facebook_notice_img.png"></p>
+					</div>
+				</div>
+			</div>
+			<!--bottom-->
+			<div class="bottom_tit rel">
+				<div class="inc-obj">
+					<img src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_bot_prd_tit.jpg" alt=""/>
+				</div>
+			</div>
+			<div class="bottomPre rel" style="background-color: #f1f1f1; padding-top: 60px; height: 1783px; overflow: hidden;">
+				<div class="inc-obj">
+					<div class="inc-obj-946">
+						<ul class="botPrdArea">
+
+							<li class="three">
+								<!--1-->
+								<div class="mc0">
+									<a class="mmc" href="http://itempage3.auction.co.kr/detailview.aspx?itemno=B408377657" target="_blank">
+										<img class="cover" src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_bottom_prd_01_cover.png" alt=""/>
+										<img src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_bottom_prd_01.jpg" alt=""/>
+									</a>
+								</div>
+								<!--2-->
+								<div class="mc1">
+									<a class="mmc" href="http://itempage3.auction.co.kr/detailview.aspx?itemno=B408382141" target="_blank">
+										<img class="cover" src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_bottom_prd_02_cover.png" alt=""/>
+										<img src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_bottom_prd_02.jpg" alt=""/>
+									</a>
+								</div>
+								<!--3-->
+								<div class="mc2">
+									<a class="mmc" href="http://itempage3.auction.co.kr/detailview.aspx?itemno=B408678603" target="_blank">
+										<img class="cover" src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_bottom_prd_03_cover.png" alt=""/>
+										<img src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_bottom_prd_03.jpg" alt=""/>
+									</a>
+								</div>
+							</li>
+							<!--4-->
+							<li class="one">
+								<a class="mmc" href="http://itempage3.auction.co.kr/detailview.aspx?itemno=B408685492" target="_blank">
+									<img class="cover" src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_bottom_prd_04_cover.png" alt=""/>
+									<img src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_bottom_prd_04.jpg" alt=""/>
+								</a>
+							</li>
+							<!--5-->
+							<li class="one">
+								<a class="mmc" href="http://itempage3.auction.co.kr/detailview.aspx?itemno=B408372811" target="_blank">
+									<img class="cover" src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_bottom_prd_05_cover.png" alt=""/>
+									<img src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_bottom_prd_05.jpg" alt=""/>
+								</a>
+							</li>
+							<li class="three">
+								<!--6-->
+								<div class="mc0">
+									<a class="mmc" href="http://itempage3.auction.co.kr/detailview.aspx?itemno=B408683783" target="_blank">
+										<img class="cover" src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_bottom_prd_06_cover.png" alt=""/>
+										<img src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_bottom_prd_06.jpg" alt=""/>
+									</a>
+								</div>
+								<!--7-->
+								<div class="mc1">
+									<a class="mmc" href="http://itempage3.auction.co.kr/detailview.aspx?itemno=B408384614" target="_blank">
+										<img class="cover" src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_bottom_prd_07_cover.png" alt=""/>
+										<img src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_bottom_prd_07.jpg" alt=""/>
+									</a>
+								</div>
+								<!--8-->
+								<div class="mc2">
+									<a class="mmc" href="http://itempage3.auction.co.kr/detailview.aspx?itemno=B408380602" target="_blank">
+										<img class="cover" src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_bottom_prd_08_cover.png" alt=""/>
+										<img src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_bottom_prd_08.jpg" alt=""/>
+									</a>
+								</div>
+							</li>
+							<li class="three">
+								<!--9-->
+								<div class="mc0">
+									<a class="mmc" href="http://itempage3.auction.co.kr/detailview.aspx?itemno=B408385768" target="_blank">
+										<img class="cover" src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_bottom_prd_09_cover.png" alt=""/>
+										<img src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_bottom_prd_09.jpg" alt=""/>
+									</a>
+								</div>
+								<!--10-->
+								<div class="mc1">
+									<a class="mmc" href="http://itempage3.auction.co.kr/detailview.aspx?itemno=B408378515" target="_blank">
+										<img class="cover" src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_bottom_prd_10_cover.png" alt=""/>
+										<img src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_bottom_prd_10.jpg" alt=""/>
+									</a>
+								</div>
+								<!--11-->
+								<div class="mc2">
+									<a class="mmc" href="http://itempage3.auction.co.kr/detailview.aspx?itemno=B408379531" target="_blank">
+										<img class="cover" src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_bottom_prd_11_cover.png" alt=""/>
+										<img src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_bottom_prd_11.jpg" alt=""/>
+									</a>
+								</div>
+							</li>
+							<!--12-->
+							<li class="one">
+								<a class="mmc" href="http://itempage3.auction.co.kr/detailview.aspx?itemno=B408383389" target="_blank">
+									<img class="cover" src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_bottom_prd_12_cover.png" alt=""/>
+									<img src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_bottom_prd_12.jpg" alt=""/>
+								</a>
+							</li>
+							<!--13-->
+							<li class="one">
+								<a class="mmc" href="http://itempage3.auction.co.kr/detailview.aspx?itemno=B408687168" target="_blank">
+									<img class="cover" src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_bottom_prd_13_cover.png" alt=""/>
+									<img src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_bottom_prd_13.jpg" alt=""/>
+								</a>
+							</li>
+							<!--14-->
+							<li class="one">
+								<a class="mmc" href="http://itempage3.auction.co.kr/detailview.aspx?itemno=B408384990" target="_blank">
+									<img class="cover" src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_bottom_prd_14_cover.png" alt=""/>
+									<img src="http://eventimg.auction.co.kr/md/auction/095C138D39/w_bottom_prd_14.jpg" alt=""/>
+								</a>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+
+
+				<script>
+					$(document).ready(function(){
+						$(".mmc").each(function(index){
+							var $this = $(this)
+							$this.mouseenter(function(){
+								selectMenu(index)
+							})
+						})
+						function selectMenu(idx){
+							$(".mmc").find(".cover").stop(true,false).animate({"opacity":0},"fast");
+							$(".mmc").eq(idx).find(".cover").stop(true,false).animate({"opacity":1},"fast");
+						}
+					})
+
+				</script>
+
+
+
+
+
+			</div>
+
+		</div>
+		<div id="p_footer">
+
+
+		</div>
+	</div>
+</body>
+</html>
